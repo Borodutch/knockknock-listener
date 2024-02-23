@@ -1,12 +1,13 @@
 import 'module-alias/register'
 import 'source-map-support/register'
 
-import runApp from '@/helpers/runApp'
-import runMongo from '@/helpers/mongo'
+import contract from '@/helpers/contract'
 
 void (async () => {
-  console.log('Starting mongo')
-  await runMongo()
-  console.log('Mongo connected')
-  await runApp()
+  console.log('Started the listener...')
+  contract.on(contract.filters.Knock, async (from) => {
+    // Put the code to open the door here
+    console.log(`Got knock from ${from}`)
+  })
+  console.log('Listener started')
 })()
