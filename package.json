@@ -19,7 +19,8 @@
     "@borodutch/knockknock-contract": "^0.0.6",
     "dotenv": "^16.4.1",
     "envalid": "^8.0.0",
-    "ethers": "^6.11.1"
+    "ethers": "^6.11.1",
+    "onoff": "^6.0.3"
   },
   "devDependencies": {
     "@big-whale-labs/bwl-eslint-backend": "^1.0.5",
